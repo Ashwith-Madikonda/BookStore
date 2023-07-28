@@ -8,3 +8,5 @@
 /src/BookStore.Api/obj
 /src/BookStore.Domain/obj
 /src/BookStotre.Infrastructure/obj
+/src/BookStore.Domain/bin/Debug/net6.0
+/src/BookStotre.Infrastructure/bin/Debug/net6.0
