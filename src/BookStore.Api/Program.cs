@@ -17,6 +17,7 @@ builder.Services.AddDbContext<BookStoreDbContext>(options =>
 });
 builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.ResolveDependencies();
+builder.Services.AddCors();
 
 var app = builder.Build();
 
@@ -29,6 +30,7 @@ if (app.Environment.IsDevelopment())
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
     });
 }
+app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
 app.UseHttpsRedirection();
 
